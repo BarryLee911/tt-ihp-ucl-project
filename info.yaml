@@ -5,8 +5,8 @@ project:
   description: "Counts ADC sign matches against a square reference over a 1600-sample sliding window."
   language: "Verilog"
   clock_hz: 80000000
-  # Initial area target; the implementation reports determine whether this fits.
-  tiles: "1x1"
+  # Evaluation size after the 1x1 floorplan exceeded available placement area.
+  tiles: "6x2"
   top_module: "tt_um_sine_area_detector"
   source_files:
     - "project.v"
@@ -38,3 +38,4 @@ pinout:
   uio[7]: "OVERLAP_COUNT[10] (output)"
 
 yaml_version: 6
+
